@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Al-Kanz Store | The Treasure of Nature</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbarToggler = document.querySelector(".navbar-toggler");
+            const navbarCollapse = document.querySelector(".navbar-collapse");
+
+            navbarToggler.addEventListener("click", function () {
+                navbarCollapse.classList.toggle("show");
+            });
+
+            document.addEventListener("click", function (event) {
+                if (!navbarToggler.contains(event.target) && !navbarCollapse.contains(event.target)) {
+                    navbarCollapse.classList.remove("show");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-color sticky-top shadow-sm py-1 glassmorphic transition-all">
+        <div class="container-fluid">
+            <a class="navbar-brand" href=""> <img id="logos" src="/img/الكنز_.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link text-black active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-black" href="/About.html">About us</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown">Products</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#dryfruits">Dry Fruits</a></li>
+                            <li><a class="dropdown-item" href="#cakes">Cakes</a></li>
+                            <li><a class="dropdown-item" href="#ice-creams">Ice Cream</a></li>
+                            <li><a class="dropdown-item" href="#dates">Arabic Delights</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Coming Soon</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-black" href="/Contact.html">Contact us</a></li>
+                </ul>
+                <form class="d-flex justify-content-center flex-grow-1 position-relative" role="search">
+                    <input class="form-control shadow-sm border-0 me-4 ms-4 search-input" type="search" placeholder="Search Your Favourite Products">
+                </form>
+                <ul class="navbar-nav ms-auto d-flex flex-row gap-3">
+                    <li><a href="#"><i class="fa-solid fa-circle-user fs-5 text-black bg-white rounded-5 p-2"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-cart-shopping fs-5 text-black bg-white rounded-5 p-2"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-heart fs-5 text-black bg-white rounded-5 p-2"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Hero Page using Carousel -->
+<section>
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="3000">
+        <img src="/img/1.webp" class="d-block w-100" alt="Dry Fruits">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Premium Dry Fruits</h5>
+          <p>Experience the finest quality Dry Fruits and Nuts at <span class="kanz-title">AL-KANZ</span>.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="/img/5.webp" class="d-block w-100" alt="Dates">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Delicious Dates</h5>
+          <p>Explore Premium Dates from Saudi Arabia, Ajwa, and more.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="/img/16.webp" class="d-block w-100" alt="Ice Creams">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Fresh Milkshakes & Ice Creams</h5>
+          <p>Enjoy the refreshing taste of Milkshakes, Faludas, and Ice Creams.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" id="home" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+<!-- All Products -->
+<section class="py-4" id="products">
+  
+  <div class="container">
+    <div class="row gy-4">
+      <h2 class="fw-bold text-center py-3 text-uppercase">Al-Kanz Delicacies</h2>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card shadow-lg border-0 h-100">
+          <a href="#">
+            <img src="/img/7.webp" class="card-img-top img-fluid rounded-3 zoom-effect" style="height: 250px; object-fit: cover;" alt="Dry Fruits">
+          </a>
+          <div class="card-body text-center d-flex flex-column" id="dryfruits"> 
+            <h3 class="card-title navbar-color py-2">Dry Fruits</h3>
+            <p class="card-text flex-grow-1">Premium quality dry fruits with rich taste.</p>
+            <h2 class="fw-bold" style="color: #cf7b30;">₹ 2500</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card shadow-lg border-0 h-100">
+          <a href="#">
+            <img src="/img/3.webp" class="card-img-top img-fluid rounded-3 zoom-effect" style="height: 250px; object-fit: cover;" alt="Dates">
+          </a>
+          <div class="card-body text-center d-flex flex-column">
+            <h3 class="card-title navbar-color py-2">Dates</h3>
+            <p class="card-text flex-grow-1">Fresh and delicious dates from the best origins.</p>
+            <h2 class="fw-bold" style="color: #cf7b30;">₹ 1200</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card shadow-lg border-0 h-100">
+          <a href="#">
+            <img src="/img/4.webp" class="card-img-top img-fluid rounded-3 zoom-effect" style="height: 250px; object-fit: cover;" alt="Milkshake">
+          </a>
+          <div class="card-body text-center d-flex flex-column">
+            <h3 class="card-title navbar-color py-2">Milkshakes</h3>
+            <p class="card-text flex-grow-1">Chilled creamy milkshakes with a delightful taste.</p>
+            <h2 class="fw-bold" style="color: #cf7b30;">₹ 180</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card shadow-lg border-0 h-100">
+          <a href="#">
+            <img src="/img/14.webp" class="card-img-top img-fluid rounded-3 zoom-effect" style="height: 250px; object-fit: cover;" alt="Ice Cream">
+          </a>
+          <div class="card-body text-center d-flex flex-column">
+            <h3 class="card-title navbar-color py-2">Ice Cream</h3>
+            <p class="card-text flex-grow-1">Royal Ice Cream with authentic flavors.</p>
+            <h2 class="fw-bold" style="color: #cf7b30;">₹ 220</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Dry Fruits -->
+<section class="mx-4 my-5">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold dryfruit-heading d-inline-block px-4 py-2 rounded-4">Dry Fruits</h2>
+  </div>
+  
+<div class="row g-4">
+  <div class="col-lg-3 col-md-6 col-sm-12">
+    <div  class="card shadow-lg border-0 equal-height">
+      <a href="#">
+<img src="/img/17.webp" class="img-fluid rounded-3 zoom-effect" style="width: 100%; height: 250px; object-fit: cover; object-position: center;" alt="Medjoul Dates">
+      </a>
+      <div class="card-body text-center">
+        <h3 class="card-title dryfruit-color py-2" style="font-size: 1.18rem;">Medjoul Jordan Premium Dates</h3>
+        <p class="card-text">Premium quality natural sweet dates from Jordan.</p>
+        <h2 class="fw-bold dryfruit-price">₹ 475</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6 col-sm-12">
+    <div  class="card shadow-lg border-0 equal-height">
+      <a href="#">
+        <img src="/img/dry2.webp" class="card-img-top img-fluid rounded-3 zoom-effect" style="height: 250px; object-fit: cover;" alt="Chile Walnut">
+      </a>
+      <div class="card-body text-center">
+        <h3 class="card-title dryfruit-color py-2">Chile Walnut Without Shell</h3>
+        <p class="card-text">Fresh Akhrot with crunchy taste and rich health benefits.</p>
+        <h2 class="fw-bold dryfruit-price">₹ 548</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6 col-sm-12">
+    <div  class="card shadow-lg border-0 equal-height">
+      <a href="#">
+        <img src="/img/dry3.webp" class="card-img-top img-fluid rounded-3 zoom-effect" style="height: 250px; object-fit: cover;" alt="Plain Pistachio">
+      </a>
+      <div class="card-body text-center">
+        <h3 class="card-title dryfruit-color py-2" style="font-size: 1.2rem;">Plain Pistachio - Without Shell</h3>
+        <p class="card-text">Handpicked crunchy Moracco pista without shell.</p>
+        <h2 class="fw-bold dryfruit-price">₹ 268</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6 col-sm-12">
+    <div  class="card shadow-lg border-0 equal-height">
+      <a href="#">
+        <img src="/img/dry4.webp" class="card-img-top img-fluid rounded-3 zoom-effect" style="height: 250px; object-fit: cover;" alt="Mamra Almonds">
+      </a>
+      <div class="card-body text-center">
+        <h3 class="card-title dryfruit-color py-2">Mamra Almonds | Badam</h3>
+        <p class="card-text">Pure Afghan Mamra Almonds with high nutrition value.</p>
+        <h2 class="fw-bold dryfruit-price">₹ 398</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<!-- Dates -->
+<section id="dates">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold dryfruit-heading d-inline-block px-4 py-2 rounded-4">Premium Dates</h2>
+  </div>
+  <div class="container my-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card shadow-lg border-0 equal-height">
+          <a href="#">
+            <img src="/img/date1.1.webp" class="card-img-top img-fluid rounded-3 zoom-effect" style="height: 250px; object-fit: cover;"  alt="Medjoul Dates">
+          </a>
+          <div class="card-body text-center">
+            <h3 class="card-title dryfruit-color py-2">Medjoul Jordan Dates</h3>
+            <p class="card-text">Premium quality natural sweet dates from Jordan.</p>
+            <h2 class="fw-bold dryfruit-price">₹ 475</h2>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card shadow-lg border-0 equal-height">
+          <a href="#">
+            <img src="/img/date2.webp" class="card-img-top img-fluid rounded-3 zoom-effect" style="height: 250px; object-fit: cover;" alt="Chile Walnut">
+          </a>
+          <div class="card-body text-center">
+            <h3 class="card-title dryfruit-color py-2">Ajwa Dates (Jumbo)</h3>
+            <p class="card-text">The King of Dates, rich in taste and health benefits.</p>
+            <h2 class="fw-bold dryfruit-price">₹ 548</h2>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card shadow-lg border-0 equal-height">
+          <a href="#">
+            <img src="/img/date3.webp" class="card-img-top img-fluid rounded-3 zoom-effect" style="height: 250px; object-fit: cover;" alt="Plain Pistachio">
+          </a>
+          <div class="card-body text-center">
+            <h3 class="card-title dryfruit-color py-2">Safawi Dates</h3>
+            <p class="card-text">Premium black dates with a soft texture and rich flavor.</p>
+            <h2 class="fw-bold dryfruit-price">₹ 268</h2>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card shadow-lg border-0 equal-height">
+          <a href="#">
+            <img src="/img/date4.webp" class="card-img-top img-fluid rounded-3 zoom-effect" style="height: 250px; object-fit: cover;" alt="Mamra Almonds">
+          </a>
+          <div class="card-body text-center">
+            <h3 class="card-title dryfruit-color py-2">Kalmi Dates</h3>
+            <p class="card-text">Soft and chewy, the perfect choice for energy and taste.</p>
+            <h2 class="fw-bold dryfruit-price">₹ 398</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Cakes -->
+<section class="mx-3 my-5" id="cakes">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold dryfruit-heading d-inline-block px-4 py-2 rounded-4">Cakes</h2>
+  </div>
+  
+  <div class="row g-4">
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card shadow-lg border-0 equal-height">
+        <a href="#">
+          <div class="img-container">
+            <img src="/img/cake1.webp" class="img-fluid zoom-effect" alt="Ajwa Date Cake">
+          </div>
+        </a>
+        <div class="card-body text-center">
+          <h3 class="card-title dryfruit-color py-2">Ajwa Date Cake</h3>
+          <p class="card-text">Soft, delicious cake made with premium Ajwa Dates and honey.</p>
+          <h2 class="fw-bold dryfruit-price">₹ 475</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card shadow-lg border-0 equal-height">
+        <a href="#">
+          <div class="img-container">
+            <img src="/img/cake2.webp" class="img-fluid zoom-effect" alt="Dry Fruit Delight Cake">
+          </div>
+        </a>
+        <div class="card-body text-center">
+          <h3 class="card-title dryfruit-color py-2">Dry Fruit Delight Cake</h3>
+          <p class="card-text">A rich and moist cake loaded with premium dry fruits and nuts.</p>
+          <h2 class="fw-bold dryfruit-price">₹ 548</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card shadow-lg border-0 equal-height">
+        <a href="#">
+          <div class="img-container">
+            <img src="/img/cake4.webp" class="img-fluid zoom-effect" alt="Black Forest Cake">
+          </div>
+        </a>
+        <div class="card-body text-center">
+          <h3 class="card-title dryfruit-color py-2">Black Forest Cake</h3>
+          <p class="card-text">Classic chocolate cake with cherry filling and whipped cream.</p>
+          <h2 class="fw-bold dryfruit-price">₹ 268</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card shadow-lg border-0 equal-height">
+        <a href="#">
+          <div class="img-container">
+            <img src="/img/cake5.webp" class="img-fluid zoom-effect" alt="Chocolate Truffle Cake">
+          </div>
+        </a>
+        <div class="card-body text-center">
+          <h3 class="card-title dryfruit-color py-2">Chocolate Truffle Cake</h3>
+          <p class="card-text">Rich chocolate cake layered with premium truffle ganache.</p>
+          <h2 class="fw-bold dryfruit-price">₹ 398</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Ice Creams -->
+<section id="ice-creams">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold dryfruit-heading d-inline-block px-4 py-2 rounded-4">Ice Cream</h2>
+  </div>
+  <div class="container my-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card shadow-lg border-0 equal-height">
+          <a href="#">
+            <img src="/img/Ice1.webp" class="card-img-top img-fluid rounded-3 zoom-effect" style="height: 310px; object-fit: cover;"  alt="Medjoul Dates">
+          </a>
+          <div class="card-body text-center">
+            <h3 class="card-title dryfruit-color py-2">Arabian Saffron Ice Cream</h3>
+            <p class="card-text">Luxury ice cream blended with real saffron and nuts.</p>
+            <h2 class="fw-bold dryfruit-price">₹ 475</h2>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card shadow-lg border-0 equal-height">
+          <a href="#">
+            <img src="/img/Ice2.webp" class="card-img-top img-fluid rounded-3 zoom-effect" style="height: 310px; object-fit: cover;" alt="Chile Walnut">
+          </a>
+          <div class="card-body text-center">
+            <h3 class="card-title dryfruit-color py-2">Pista & Rose Ice Cream</h3>
+            <p class="card-text">Refreshing ice cream with Premium Persian pista and rose flavor.</p>
+            <h2 class="fw-bold dryfruit-price">₹ 548</h2>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card shadow-lg border-0 equal-height">
+          <a href="#">
+            <img src="/img/ice3.webp" class="img-fluid rounded-3 zoom-effect w-100" style="height: 315px; object-fit: cover;" alt="Chocolate Hazelnut Ice Cream">
+          </a>
+          <div class="card-body text-center">
+            <h3 class="card-title dryfruit-color py-2" style="font-size: 1.3rem;">Chocolate Hazelnut Ice Cream</h3>
+            <p class="card-text">Premium chocolate ice cream with roasted hazelnuts.</p>
+            <h2 class="fw-bold dryfruit-price">₹ 268</h2>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card shadow-lg border-0 equal-height">
+          <a href="#">
+            <img src="/img/ice4.webp" class="card-img-top img-fluid rounded-3 zoom-effect" style="height: 310px; object-fit: cover;" alt="Mamra Almonds">
+          </a>
+          <div class="card-body text-center">
+            <h3 class="card-title dryfruit-color py-2">Premium Ajwa Ice Cream</h3>
+            <p class="card-text">Arabic dessert made with Ajwa Dates and milk.</p>
+            <h2 class="fw-bold dryfruit-price">₹ 398</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gits Combos -->
+<section class="mx-5 my-5">
+  <div class="row g-4">
+    <!-- Card 1 -->
+    <h2 class="fw-bold text-center py-3 text-uppercase combo-heading">Gift Combos</h2>
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="gift-card position-relative overflow-hidden rounded-4 shadow-lg">
+        <img src="/img/4.webp" class="img-fluid w-100" alt="Gift Combo">
+        <div class="gift-info text-center p-3">
+          <h3 class="fw-bold mb-3">Ajwa + Almond Combo</h3>
+          <h4 class="fw-bold dryfruit-price">₹ 1,275</h4>
+          <a href="#" class="btn btn-warning rounded-3 fw-bold px-4">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="gift-card position-relative overflow-hidden rounded-4 shadow-lg">
+        <img src="/img/3.webp" class="img-fluid w-100" alt="Gift Combo">
+        <div class="gift-info text-center p-3">
+          <h3 class="fw-bold mb-3">Pista + Walnut Combo</h3>
+          <h4 class="fw-bold dryfruit-price">₹ 1,548</h4>
+          <a href="#" class="btn btn-warning rounded-3 fw-bold px-4">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="gift-card position-relative overflow-hidden rounded-4 shadow-lg">
+        <img src="/img/2.webp" class="img-fluid w-100" alt="Gift Combo">
+        <div class="gift-info text-center p-3">
+          <h3 class="fw-bold mb-3">Ajwa + Mamra Almond Combo</h3>
+          <h4 class="fw-bold dryfruit-price">₹ 2,375</h4>
+          <a href="#" class="btn btn-warning rounded-3 fw-bold px-4">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="gift-card position-relative overflow-hidden rounded-4 shadow-lg">
+        <img src="/img/1.webp" class="img-fluid w-100" alt="Gift Combo">
+        <div class="gift-info text-center p-3">
+          <h3 class="fw-bold mb-3">Dry Fruit Delight Combo</h3>
+          <h4 class="fw-bold dryfruit-price">₹ 1,899</h4>
+          <a href="#" class="btn btn-warning rounded-3 fw-bold px-4">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Customer Feedback -->
+<section class="mx-3 my-1 py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center py-3 text-uppercase combo-heading-feedback position-relative">
+      What Our Customers Say
+    </h2>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active text-center">
+          <i class="fa-solid fa-quote-left fs-1"></i>
+          <p class="my-4 fst-italic">
+            "Excellent products and quality packaging. Highly recommend!"
+          </p>
+          <h4 class="fw-bold">Mohamed Zeeshan</h4>
+        </div>
+  
+        <div class="carousel-item text-center">
+          <i class="fa-solid fa-quote-left fs-1"></i>
+          <p class="my-4 fst-italic">
+            "Amazing taste and fast delivery. Definitely ordering again!"
+          </p>
+          <h4 class="fw-bold">Faheemur Rahman</h4>
+        </div>
+  
+        <div class="carousel-item text-center">
+          <i class="fa-solid fa-quote-left fs-1"></i>
+          <p class="my-4 fst-italic">
+            "Best quality dry fruits I have ever purchased! Great service. and fast delivery."
+          </p>
+          <h4 class="fw-bold">Areeb Ammar</h4>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+  
+</section>
+
+
+<!-- Featured Collection -->
+<section>
+  <div class="featured-collection">
+    <h2 class="collection-title">Featured Selections</h2>
+    <div class="modern-grid">
+      <div class="modern-card">
+        <img src="/img/abc (3).jpg" alt="Dry Fruits">
+        <div class="modern-content">
+          <h3>Dry Fruits</h3>
+          <p>Premium Quality</p>
+          <button>Shop Now</button>
+        </div>
+      </div>
+  
+      <div class="modern-card">
+        <img src="/img/abc (18).jpg" alt="Honey">
+        <div class="modern-content">
+          <h3>Honey</h3>
+          <p>100% Organic</p>
+          <button>Shop Now</button>
+        </div>
+      </div>
+  
+      <div class="modern-card">
+        <img src="/img/abc (12).jpg" alt="Dates">
+        <div class="modern-content">
+          <h3>Dates</h3>
+          <p>Ajwa, Safawi, Mabroom</p>
+          <button>Shop Now</button>
+        </div>
+      </div>
+  
+      <div class="modern-card">
+        <img src="/img/abc (4).jpg" alt="Chocolate">
+        <div class="modern-content">
+          <h3>Chocolate</h3>
+          <p>Imported Delights</p>
+          <button>Shop Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<!-- About Metrics -->
+<section class="about-ajfan my-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
+        <h2 class="fw-bold mb-3" style="letter-spacing: 1px;">Welcome to <span class="metrics">Al-KANZ</span></h2>
+        <p class="lead text-muted">
+          The Treasure of Premium Delicacies, where our legacy of quality and trust has been built over the years. Explore our finest selection of premium dates, exotic nuts, and handpicked gourmet products sourced globally with perfection.
+        </p>
+        <p class="text-muted">
+          Discover the richness of natural flavors and experience the finest craftsmanship that goes beyond ordinary.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-4">
+          <div class="col-md-6 text-center">
+            <div class="p-3 shadow rounded-4 bg-light">
+              <h3 class="fw-bold metrics mb-0">200+</h3>
+              <p class="text-muted mb-0">Total Stores</p>
+            </div>
+          </div>
+          <div class="col-md-6 text-center">  
+            <div class="p-3 shadow rounded-4 bg-light">
+              <h3 class="fw-bold metrics mb-0">2</h3>
+              <p class="text-muted mb-0">Total Countries</p>
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <div class="p-3 shadow rounded-4 bg-light">
+              <h3 class="fw-bold metrics mb-0">5000+</h3>
+              <p class="text-muted mb-0">Total Products</p>
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <div class="p-3 shadow rounded-4 bg-light">
+              <h3 class="fw-bold metrics mb-0">50+</h3>
+              <p class="text-muted mb-0">Premium Date Varieties</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Social Media -->
+    <section class="container my-5">
+      <h2 class="fw-bold text-center py-3 text-uppercase insta-heading">Instagram Feeds</h2>
+      <div class="row justify-content-center insta-carousel">
+        <div class="col-lg-2 col-md-3 col-6 insta-box">
+          <img src="img/1.webp" class="img-fluid rounded-4 shadow-lg" alt="">
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 insta-box">
+          <img src="img/2.webp" class="img-fluid rounded-4 shadow-lg" alt="">
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 insta-box">
+          <img src="img/3.webp" class="img-fluid rounded-4 shadow-lg" alt="">
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 insta-box">
+          <img src="img/4.webp" class="img-fluid rounded-4 shadow-lg" alt="">
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 insta-box">
+          <img src="img/5.webp" class="img-fluid rounded-4 shadow-lg" alt="">
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 insta-box">
+          <img src="img/6.webp" class="img-fluid rounded-4 shadow-lg" alt="">
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 insta-box">
+          <img src="img/7.webp" class="img-fluid rounded-4 shadow-lg" alt="">
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 insta-box">
+          <img src="img/8.webp" class="img-fluid rounded-4 shadow-lg" alt="">
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 insta-box">
+          <img src="img/9.webp" class="img-fluid rounded-4 shadow-lg" alt="">
+        </div>    
+      </div>
+    </section>
+    
+
+<!-- footer -->
+<section>
+  <footer class="footer">
+    <div class="container">
+      <div class="row text-center text-md-start">
+
+        <!-- Logo -->
+        <div class="col-md-3 col-12 mb-4">
+          <a href="#" >
+            <img src="/img/الكنز_.png"  alt="logo" class="footer-logo img-fluid ">
+          </a>
+        </div>
+
+        <!-- About Section -->
+        <div class="col-md-3 col-12 mb-4">
+          <h4>About Al-KANZ</h4>
+          <p>We offer premium quality dry fruits, honey, dates, and chocolates with 100% natural and authentic products.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-2 col-12 mb-4">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="/About.html">About Us</a>
+          <a href="#products">Products</a>
+          <a href="/Contact.html">Contact Us</a>
+        </div>
+
+        <!-- Follow Us -->
+        <div class="col-md-2 col-12 mb-4">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-md-2 col-12 mb-4">
+          <h4>Contact Us</h4>
+          <form class="contact-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" rows="2"></textarea>
+            <button type="submit" class="btn-custom">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>© 2025 Al-Kanz Store. All Rights Reserved.</p>
+    </div>
+  </footer>
+</section>
+      <script>  
+      let products = [
+  "Ajwa Dates",
+  "Honey Almond",
+  "Cashew Nuts",
+  "Pistachio",
+  "Walnut",
+  "Arabian Baklava",
+  "Dry Fruits Gift Box",
+  "Black Seed Oil",
+  "Saffron",
+  "Mabroom Dates"
+  ];
+  
+  let searchInput = document.querySelector(".search-input");
+  let searchResults = document.querySelector(".search-results");
+  
+  searchInput.addEventListener("input", () => {
+  let searchTerm = searchInput.value.toLowerCase();
+  searchResults.innerHTML = "";
+  
+  if (searchTerm !== "") {
+    let filteredProducts = products.filter((product) =>
+      product.toLowerCase().includes(searchTerm)
+    );
+  
+    if (filteredProducts.length > 0) {
+      filteredProducts.slice(0, 5).forEach((product) => {
+        let resultItem = document.createElement("div");
+        resultItem.classList.add("result-item");
+        resultItem.textContent = product;
+        searchResults.appendChild(resultItem);
+  
+        resultItem.addEventListener("click", () => {
+          searchInput.value = product;
+          searchResults.innerHTML = "";
+        });
+      });
+    } else {
+      searchResults.innerHTML = "<div class='no-result'>No Result Found</div>";
+    }
+  }
+  });
+  
+ 
+  
+  
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>

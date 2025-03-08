@@ -1,0 +1,645 @@
+*{
+ margin: 0px;
+    padding: 0px; 
+    box-sizing: border-box;  
+}
+body{
+ scroll-behavior: smooth;
+ background: linear-gradient(to bottom, #ffffff, #ecb483);
+}
+
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.9); 
+  backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  padding: 0.2rem 0rem; /* Small Navbar Height */
+  background: rgba(255, 255, 255, 0.8); /* Blur Glass Effect */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Smooth Shadow */
+}
+
+.glassmorphic {
+  backdrop-filter: blur(10px); /* Glass Effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari Support */
+  background: rgba(255, 255, 255, 0.9); /* Transparent White */
+  transition: all 0.3s ease; /* Smooth Effect */
+}
+
+
+#logos {
+    width: 80px;;
+    height: 70px;
+    object-fit: contain;  
+  }
+  
+.navbar-color {
+    background: linear-gradient(to right, #ffffff, #ecb483);
+  }
+
+  .search-results {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .result-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background 0.3s ease;
+  }
+  
+  .result-item:hover {
+    background: #f1f1f1;
+  }
+  
+  .no-result {
+    padding: 10px;
+    text-align: center;
+    color: #888;
+  }
+  
+ 
+  .navbar-nav .nav-link {
+    transition: background 0.3s ease-in-out;
+    margin: 0.3rem 0.3rem;
+    border-radius: 10px; 
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background: #837b4d;
+  }
+  
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link:focus,
+  .navbar-nav .nav-link:active {
+    background: #f9d7ec;
+    color: #000000 !important; 
+    outline: none; 
+  }
+  
+  /* .navbar-nav a i {
+    pointer-events: none; /* This line is causing the problem 
+  }
+  
+  .navbar-nav a:hover i {
+    pointer-events: auto; /* This will re-enable the hover 
+    transition: 0.3s ease-in-out; 
+    color: #e00000; /* Red Hover 
+  }
+   */
+
+  .fa-solid.active,
+  .fa-solid:focus,
+  .fa-solid:active {
+    background: #c6d9f4;
+    color: #1500ff !important; 
+    outline: none; 
+  }
+  
+  .carousel-inner img {
+    height: 60vh;
+    width: 100%; 
+    object-fit: cover; 
+    object-position: center center; 
+  }
+  .card img {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+
+  .zoom-effect {
+    transition: transform 0.3s ease-in-out; /* Smooth Animation */
+  }
+  
+  .zoom-effect:hover {
+    transform: scale(1.05); /* Zoom Image on Hover */
+  }
+    
+  .dryfruit-heading {
+    background: linear-gradient(to right, #8B0000, #E9967A);
+    color: white;
+    display: inline-block;
+    padding: 10px 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+
+
+   .container {
+    padding: 0 30px; /* Space Around Container */
+  }
+  
+  .combo-heading {
+    position: relative;
+    display: inline-block;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    color: #222; /* Professional Color */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: color 0.4s ease-in-out;
+  }
+  
+  .combo-heading::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background: #ecb483; /* Your Golden Business Color */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.4s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  .combo-heading:hover {
+    color: #ecb483; /* Hover Color Golden */
+  }
+  
+  .combo-heading:hover::after {
+    width: 150px; /* On Hover Line Width */
+    background-color: black;
+  }
+  
+  .dryfruit-color {
+    background: linear-gradient(to right, #dec2a9, #e5b084);
+    color: #3b240b; /* Same Heading Color */
+  }
+  
+  .dryfruit-price {
+    color: #c71585; /* Modern Attractive Brown */
+  }
+  
+  .zoom-effect {
+    transition: 0.3s ease-in-out;
+  }
+  
+  .zoom-effect:hover {
+    transform: scale(1.1);
+  }
+
+  .zoom-effect {
+    height: 250px; /* Fixed height */
+    object-fit: cover; /* Image will crop without stretch */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .zoom-effect:hover {
+    transform: scale(1.1); /* Zoom Hover */
+  }
+  
+  
+  .equal-height {
+    height: 100%; /* Equal Height For All Cards */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .equal-height .card-body {
+    flex: 1; /* This will make all card contents equal */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card-title {
+    font-size: calc(1rem + 0.3vw); /* Responsive Title */
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: calc(0.9rem + 0.2vw); /* Responsive Paragraph */
+  }
+  
+  .dryfruit-price {
+    font-size: calc(1.3rem + 0.4vw); /* Responsive Price Text */
+  }
+  
+  
+  .gift-card img {
+    transition: transform 0.4s ease-in-out;
+    object-fit: cover;
+    height: 350px;
+  }
+  
+  .gift-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  
+    .gift-info {
+      position: absolute;
+      bottom: -100px;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      transition: bottom 0.4s ease-in-out;
+      padding: 40px 20px; /* Increase this to make the shadow height bigger */
+      min-height: 160px; /* This will fix height issue */
+    }
+    
+  
+  
+  .gift-card:hover .gift-info {
+    bottom: 0; 
+  }
+   
+  
+
+
+  .combo-heading-feedback::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 3px;
+    top: 6px;
+    background: #ffc107; /* Golden Line */
+    margin: auto;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .combo-heading-feedback:hover::after {
+    width: 150px;
+    background: #000; /* Black Hover Line */
+  }
+  
+  .fa-quote-left{
+    color: #c3bbc1; /* Golden Color */
+  }
+
+  .carousel-item p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .carousel-item h4 {
+    color: #c71585; /* Golden Color Name */
+  }
+  
+
+  .about-ajfan .shadow:hover {
+    border: 2px solid black;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }
+
+  .metrics{
+    color: #c71585;
+  }
+  
+
+  .insta-box {
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .insta-box img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .insta-box:hover img {
+    transform: scale(1.2);
+    filter: brightness(75%) contrast(1.2);
+  }
+  
+  .insta-box::before {
+    content: "View Post";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 25px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    opacity: 0;
+  }
+  
+  .insta-box:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.1;
+  }
+
+  .insta-heading::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 3px;
+    top: 6px;
+    background: #ffc107; /* Golden Line */
+    margin: auto;
+    transition: all 0.4s ease-in-out;
+    margin-bottom: 1rem;
+  }
+  
+  .insta-heading:hover::after {
+    width: 150px;
+    background: #000; /* Black Hover Line */
+  }
+  
+  .insta-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  
+  .insta-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+
+
+  .featured-collection {
+    text-align: center;
+    padding: 60px;
+  }
+  
+  .collection-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: #333;
+    letter-spacing: 3px;
+    font-weight: 700;
+  }
+  
+  .collection-title::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 3px;
+    top: 6px;
+    background: #ffc107; /* Golden Line */
+    margin: auto;
+    transition: all 0.4s ease-in-out;
+    margin-bottom: 2rem;
+  }
+  
+  .collection-title:hover::after {
+    width: 150px;
+    background: #000; /* Black Hover Line */
+  }
+
+  .modern-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  
+  .modern-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+  }
+  
+  .modern-card:hover {
+    transform: scale(1.05) rotateX(10deg);
+    box-shadow: 0 0 40px rgba(255, 166, 0, 0.8);
+  }
+  
+  .modern-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+  }
+  
+  .modern-card:hover img {
+    filter: blur(4px) brightness(0.7);
+  }
+  
+  .modern-content {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+  }
+  
+  .modern-card:hover .modern-content {
+    transform: translateY(0);
+  }
+  
+  .modern-content h3 {
+    font-size: 1.8rem;
+    color: #ffa500;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .modern-content p {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .modern-content button {
+    padding: 10px 25px;
+    border: none;
+    background: #ffa500;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .modern-content button:hover {
+    background: #ff7700;
+  }
+
+  .modern-card:hover {
+    transform: perspective(1000px) rotateY(10deg) scale(1.1);
+  }
+  
+  .modern-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+    gap: 30px;
+  }
+  
+  /* Medium screens (2 columns) */
+  @media (max-width: 900px) {
+    .modern-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Small screens (1 column) */
+  @media (max-width: 600px) {
+    .modern-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  .footer {
+    color: #000000;
+    padding: 50px 0 20px;
+  }
+  
+  .footer h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .footer p, .footer a {
+    color: #000;
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .footer-logo {
+    max-width: 100px; /* Change this value to make the image smaller */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0;
+  }
+   
+
+  .footer a:hover {
+    color: #c71585;
+  }
+  
+  .footer-logo {
+    max-width: 150px;
+  }
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center; /* Center icons */
+    align-items: center;
+    flex-wrap: wrap; /* Automatically adjust in small screens */
+  }
+  
+  .social-icons a {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #000000;
+    transition: 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #c71585;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: #e0e0e0;
+    border: none;
+    color: #000000;
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    padding: 1px;
+    color: #bbb;
+  }
+  
+  .btn-custom {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 25px;
+    transition: 0.3s;
+  }
+  
+  .btn-custom:hover {
+    background: #c71585;
+    color: black;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  @media (max-width: 768px) {
+    .footer .row {
+      text-align: center;
+    }
+  
+    .social-icons {
+      justify-content: center;
+    }
+  }
+   
+ 
+
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 15px; /* For Mobile Devices */
+    }
+ 
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-inner img {
+      height: 40vh; /* Mobile View */
+      object-fit: contain; /* No Cutting in Mobile */
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 0.2rem 0rem; 
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .navbar {
+      padding: 0.4rem 0rem; 
+    }
+  }
+  
