@@ -109,10 +109,9 @@ body{
   }
   
   .carousel-inner img {
+    width: 100%;
     height: 60vh;
-    width: 100%; 
-    object-fit: cover; 
-    object-position: center center; 
+    object-fit: contain;
   }
   .card img {
     border-top-left-radius: inherit;
